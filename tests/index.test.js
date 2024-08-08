@@ -1,4 +1,4 @@
-// Import necessary libraries
+// index.test.js
 const { getByPlaceholderText, getByText } = require('@testing-library/dom');
 const fs = require('fs');
 const path = require('path');
