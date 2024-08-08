@@ -1,5 +1,21 @@
+# Set all text files to use LF line endings
+* text=auto
 
-echo "*.json text eol=lf" >> .gitattributes
-echo "*.js text eol=lf" >> .gitattributes
-git add .gitattributes
-git commit -m "Add .gitattributes to handle line endings"
+# Ensure JSON and JS files use LF line endings
+*.json text eol=lf
+*.js text eol=lf
+
+# Ensure Markdown files use LF line endings
+*.md text eol=lf
+
+# Set specific files to be treated as binary (e.g., images)
+*.png binary
+*.jpg binary
+*.gif binary
+
+# Apply merge strategy for specific files
+*.sh merge=union
+
+# Custom diff settings for specific files
+*.xml diff=xml
+*.csv diff=csv
